@@ -27,7 +27,7 @@ game.challenge(dice: 19, value: 3) => false
 This formula can be used to determine the probability of k dice of the same value given n total dice:
 
 ```
-n! / k! (n - k)! * (1/6)^k * 5/6^(n-k)
+n! / k! (n - k)! * (1/6)^k * (5/6)^(n-k)
 ```
 However, it only tells us the probability of the exact number of dice, not "at least this number". So we have to sum all the possibilites together.
 
@@ -35,8 +35,8 @@ Example: There are 17 dice left, and we want to calculate the odds of at least 1
 Thus we calculate the probabilty of getting exactly 16 and add that to the probability that all 17 are the same.
 
 ```
-17! / 16!(1!) * (1/6)^16 * 5/6^1 = 0.0000000000051
-17! / 17!(0!) * (1/6)^17 * 5/6^0 = 0.000000000000059
+17! / 16!(1!) * (1/6)^16 * (5/6)^1 = 0.0000000000051
+17! / 17!(0!) * (1/6)^17 * (5/6)^0 = 0.000000000000059
 ```
 
 (0.0000000000051 + 0.000000000000059) * 100 = 0.000000000516% or pretty much never.
@@ -59,5 +59,5 @@ game.claim(dice: 20, value: 3)
 Since there is only 1 die left n = 1, k = 1, thus:
 
 ```
-1! / 1!0! * 1/6^1 * 5/6^0 = 16.67%
+1! / 1!0! * 1/6^1 * (5/6)^0 = 16.67%
 ```
