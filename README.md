@@ -44,10 +44,10 @@ Thus we calculate the probabilty of getting exactly 16 and add that to the proba
 Now if we do this:
 
 ```
-game.move(player: 3, dice: 5, value: 3)
-game.move(player: 4, dice: 5, value: 3)
-game.move(player: 1, dice: 3, value: 3)
-game.move(player: 2, dice: 3, value: 3)
+game.move(player: 3, dice: 2, value: 3)
+game.move(player: 4, dice: 4, value: 3)
+game.move(player: 1, dice: 6, value: 3)
+game.move(player: 2, dice: 7, value: 3)
 ```
 
 There are 19 3's on the board. (Assuming all the .move calls in this document)
